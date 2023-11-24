@@ -1,0 +1,47 @@
+{% extends 'reg_log\base.html' %}
+{% block title %}About us{% endblock %}
+{% block Abuot %}
+     <style>
+        .button1:hover
+        {
+            background-color: white;
+            color: rgba(0, 94, 255, 0.872);
+            border: 1px solid rgba(0, 94, 255, 0.872);
+        }
+        .button1:active
+        {
+            width: 160px;
+            height: 60px;
+            margin-left: 37%;
+        }
+        .button1
+        {
+            color: white;
+            font-size: 20px;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            margin-left: 38%;
+            margin-top: 50px;
+            border: none;
+            background-color: rgba(0, 94, 255, 0.872);
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+        }
+     </style>
+     <div style="width: 600px;height: 500px;border-radius: 30px;background-color: white;border:  1px solid black;margin-left: 30%;margin-top: 200px;position: absolute;box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);">
+        <form method="post">
+            {% csrf_token %}
+            <p style="color: rgba(0, 94, 255, 0.872);font-size: 30px;font-weight: 900;text-align: center;margin-top: 30px;">Registration!</p>
+            {{ form.username }}
+            {{ form.password }}
+            <button type="submit" class="button1" >SIGN UP</button>
+        </form>
+     </div>
+     <div style="height: 100px;background-color: bisque;bottom:-200px; position: absolute;width: 100%;border:  1px solid black">
+        <p style="text-align: center;color: rgba(0, 94, 255, 0.872);margin-top: 30px;">CREATED BY MUHAMMADJON.</p>
+        <p style="text-align: center;color: rgba(0, 94, 255, 0.872);display: inline-block;margin-left: 630px;">for more info : </p><a href="https://t.me/individualy_01" style="text-align: center;display: inline-block;;margin-top: 20px;"> individualy_01</a>
+        <span>{{ error }}</span>
+    </div>
+{% endblock %}
